@@ -59,12 +59,12 @@ class Profile extends Component {
         </div>
         <div className="profile-icons">
           <ul>
-            <li onClick={() => {this.updateDisplayInfo(this.state.userData.registered)}}> <AiFillContacts/> </li>
-            <li onClick={() => {this.updateDisplayInfo(this.state.userData.email)}}> <AiFillMail /> </li>
-            <li onClick={() => {this.updateDisplayInfo(this.state.userData.dob)}}> <FaBirthdayCake/> </li>
-            <li onClick={() => {this.updateDisplayInfo(this.state.userData.location)}}> <FaMap/> </li>
-            <li onClick={() => {this.updateDisplayInfo(this.state.userData.cell)}}> <AiOutlinePhone/> </li>
-            <li onClick={() => {this.updateDisplayInfo(this.state.userData.login.username)}}> <FaKey/> </li>
+            <li key="1" onClick={() => {this.updateDisplayInfo(this.state.userData.registered)}}> <AiFillContacts/> </li>
+            <li key="2" onClick={() => {this.updateDisplayInfo(this.state.userData.email)}}> <AiFillMail /> </li>
+            <li key="3" onClick={() => {this.updateDisplayInfo(this.state.userData.dob)}}> <FaBirthdayCake/> </li>
+            <li key="4" onClick={() => {this.updateDisplayInfo(this.state.userData.location)}}> <FaMap/> </li>
+            <li key="5" onClick={() => {this.updateDisplayInfo(this.state.userData.cell)}}> <AiOutlinePhone/> </li>
+            <li key="6" onClick={() => {this.updateDisplayInfo(this.state.userData.login.username)}}> <FaKey/> </li>
           </ul>
         </div>
         <div className="profile-paragraph">

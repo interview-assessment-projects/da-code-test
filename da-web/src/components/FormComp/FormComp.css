@@ -1,8 +1,37 @@
 .Form {
+    padding-bottom: 50px;
+}
+
+.Form h2 {
+    text-align: left;
 }
 
 input {
     display: block;
-    margin: auto;
-    width: 80%;
+    margin: 20px 0;
+    width: 95%;
+}
+
+input:nth-child(1),
+input:nth-child(2) {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+}
+
+input[type="textarea"] {
+    border-style: groove;
+    min-height: 100px;
+}
+
+input[type="textarea"]::-webkit-input-placeholder {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+input[type="submit"] {
+    background-color: #fff;
+    padding: 10px 0;
 }
