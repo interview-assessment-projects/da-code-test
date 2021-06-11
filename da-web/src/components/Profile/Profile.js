@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import UserService from '../../services/UserService';
+import { AiFillContacts, AiFillMail, AiOutlinePhone } from "react-icons/ai";
+import { FaBirthdayCake, FaMap, FaKey  } from "react-icons/fa";
 import './Profile.css';
 
 class Profile extends Component {
@@ -19,7 +20,6 @@ class Profile extends Component {
     // Get random user data
     UserService.getRandoUser()
       .then(result => {
-        console.log(result)
         this.setState({
           isLoaded: true,
           userData: result
@@ -48,12 +48,12 @@ class Profile extends Component {
         </div>
         <div className="profile-icons">
           <ul>
-            <li>icon 1</li>
-            <li>icon 2</li>
-            <li>icon 3</li>
-            <li>icon 4</li>
-            <li>icon 5</li>
-            <li>icon 6</li>
+            <li> <AiFillContacts/> </li>
+            <li> <AiFillMail /> </li>
+            <li> <FaBirthdayCake/> </li>
+            <li> <FaMap/> </li>
+            <li> <AiOutlinePhone/> </li>
+            <li> <FaKey/> </li>
           </ul>
         </div>
         <div className="profile-paragraph">

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaFacebookF, FaTwitter, FaInstagram  } from "react-icons/fa";
 import './NavBar.css';
 
 const NavBar = () => (
   <div className="NavBar">
     <ul>
-        <li>icon 1</li>
-        <li>icon 2</li>
-        <li>icon 3</li>
+        <li> <FaFacebookF/> </li>
+        <li> <FaTwitter/> </li>
+        <li> <FaInstagram/> </li>
       </ul>
   </div>
 );
