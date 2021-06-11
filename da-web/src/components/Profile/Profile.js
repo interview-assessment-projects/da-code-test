@@ -11,7 +11,8 @@ class Profile extends Component {
     this.state = {
       isLoaded: false,
       userData: null,
-      error: null
+      error: null,
+      userInfoToDisplay: null
     }
   }
 
@@ -22,7 +23,8 @@ class Profile extends Component {
       .then(result => {
         this.setState({
           isLoaded: true,
-          userData: result
+          userData: result.results[0],
+          userInfoToDisplay: result.results[0].registered
         })
       },
       (error) => {
@@ -34,7 +36,17 @@ class Profile extends Component {
     );
   }
 
+  updateDisplayInfo(data) {
+    console.log(data);
+    this.setState({
+      userInfoToDisplay: data
+    })
+  }
+
   render() {
+
+    let info = JSON.stringify(this.state.userInfoToDisplay).split(",");
+
     if (this.state.error) {
       return <div>Error: {this.state.error.message}</div>;
     } else if (!this.state.isLoaded) {
@@ -42,22 +54,35 @@ class Profile extends Component {
     } else {
       return (
         <div className="Profile">
-        <h1>Profile Component</h1>
         <div className="profile-img-cont">
-          <img src={this.state.userData.results[0].picture.large} alt=""></img>
+          <img src={this.state.userData.picture.large} alt=""></img>
         </div>
         <div className="profile-icons">
           <ul>
-            <li> <AiFillContacts/> </li>
-            <li> <AiFillMail /> </li>
-            <li> <FaBirthdayCake/> </li>
-            <li> <FaMap/> </li>
-            <li> <AiOutlinePhone/> </li>
-            <li> <FaKey/> </li>
+            <li onClick={() => {this.updateDisplayInfo(this.state.userData.registered)}}> <AiFillContacts/> </li>
+            <li onClick={() => {this.updateDisplayInfo(this.state.userData.email)}}> <AiFillMail /> </li>
+            <li onClick={() => {this.updateDisplayInfo(this.state.userData.dob)}}> <FaBirthdayCake/> </li>
+            <li onClick={() => {this.updateDisplayInfo(this.state.userData.location)}}> <FaMap/> </li>
+            <li onClick={() => {this.updateDisplayInfo(this.state.userData.cell)}}> <AiOutlinePhone/> </li>
+            <li onClick={() => {this.updateDisplayInfo(this.state.userData.login.username)}}> <FaKey/> </li>
           </ul>
         </div>
         <div className="profile-paragraph">
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt msollit anim id est laborum."</p>
+          <h1>
+            {this.state.userData.name.title}&nbsp;
+            {this.state.userData.name.first}&nbsp;
+            {this.state.userData.name.last}
+          </h1>
+          <div>
+            <p>
+              {info.map((item) => {
+                  return (
+                      <span> {item} <br/></span>
+                  )})
+              }
+          </p>
+
+          </div>
         </div>
       </div>
       )

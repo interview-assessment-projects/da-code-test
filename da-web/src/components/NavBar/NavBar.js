@@ -6,9 +6,9 @@ import './NavBar.css';
 const NavBar = () => (
   <div className="NavBar">
     <ul>
-        <li> <a href="https://www.facebook.com" target="_blank"><FaFacebookF/></a> </li>
-        <li> <a href="https://www.twitter.com" target="_blank"><FaTwitter/></a> </li>
-        <li> <a href="https://www.instagram.com" target="_blank"><FaInstagram/></a> </li>
+        <li> <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><FaFacebookF/></a> </li>
+        <li> <a href="https://www.twitter.com" target="_blank" rel="noreferrer"><FaTwitter/></a> </li>
+        <li> <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><FaInstagram/></a> </li>
       </ul>
   </div>
 );
