@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const usersController = require('../controllers/users');
+
+/* POST user message data to mongo. */
+router
+    .route('/addUser')
+    .post(usersController.addUser);
 
 module.exports = router;
