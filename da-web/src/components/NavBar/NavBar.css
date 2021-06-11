@@ -14,3 +14,7 @@
     display: inline-block;
     width: 33%;
 }
+
+.NavBar a {
+    color: black;
+}
