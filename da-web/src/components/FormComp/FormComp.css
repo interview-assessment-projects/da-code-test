@@ -1,1 +1,9 @@
-.Form {}
+.Form {
+    padding: 10px;
+}
+
+input {
+    display: block;
+    margin: auto;
+    width: 80%;
+}

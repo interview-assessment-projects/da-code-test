@@ -1,1 +1,16 @@
-.NavBar {}
+.NavBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.NavBar ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.NavBar li {
+    display: inline-block;
+    width: 33%;
+}
