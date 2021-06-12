@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = mongoose.model('senders'); // mongo collection name "senders"
+const User = mongoose.model('users');
 
 // POST: /addUser - adds a new user to list
 const addUser = async (req, res) => {

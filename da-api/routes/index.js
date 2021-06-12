@@ -5,7 +5,7 @@ const usersController = require('../controllers/users');
 
 /* POST user message data to mongo. */
 router
-    .route('/addUser')
+    .route('/saveFormContent')
     .post(usersController.addUser);
 
 module.exports = router;

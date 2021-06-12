@@ -3,7 +3,16 @@
     bottom: 0;
     width: 100%;
     background-color:#fff;
-    border-top: 2px solid #555;
+}
+
+.NavBar::after {
+    content: '';
+    height: 0.5rem;
+    border-bottom: 2px solid #555;
+    position: absolute;
+    bottom: 100%;
+    left: -5vw;
+    width: 105vw;
 }
 
 .NavBar ul {
@@ -19,4 +28,35 @@
 
 .NavBar a {
     color: black;
+}
+
+@media only screen and (min-width: 1280px) {
+    .NavBar {
+        position:initial;
+        width: auto;
+        height: 50vh;
+    }
+
+    .NavBar ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .NavBar li {
+        display: inline-block;
+        width: 33%;
+    }
+
+    /* .NavBar::after {
+        content: '';
+        border-right: 2px solid #555;
+        position: absolute;
+        top: -5vh;
+        right: 0;
+        height: 150%;
+        border-bottom: 0;
+        width: auto;
+    } */
 }

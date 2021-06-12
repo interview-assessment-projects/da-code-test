@@ -6,10 +6,10 @@ var path = require('path');
 const bodyParser= require('body-parser'); // parses form data & incoming req bodies from req.body
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-let port = 4200;
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+require('./models/db'); // application connects to db on startup
+
+const apiRouter = require('./routes/index'); // get router index for api endpoints
 
 var app = express();
 
@@ -18,8 +18,8 @@ var listener = app.listen(parseInt(process.env.PORT, 10), function(){
 });
 
 // allow CORS
-app.use('/img', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+app.use('/saveFormContent', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   res.header('Access-Control-Allow-Methods', 'POST');
   next();
@@ -32,9 +32,7 @@ app.use(bodyParser.json()); // handle JSON request bodies
 app.use(bodyParser.urlencoded({ extended: true })); // handle x-www-form-urlencoded request bodies
 app.use(cookieParser());
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// app.use('/', apiRouter); // Any requests get passed to apiRouter
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -42,8 +40,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/saveFormContent', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
