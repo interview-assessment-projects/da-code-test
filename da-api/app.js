@@ -1,8 +1,8 @@
-require('dotenv').config();
+var path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 var createError = require('http-errors');
 const cors = require('cors');
 var express = require('express');
-var path = require('path');
 const bodyParser= require('body-parser'); // parses form data & incoming req bodies from req.body
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -14,7 +14,7 @@ const apiRouter = require('./routes/index'); // get router index for api endpoin
 var app = express();
 
 var listener = app.listen(parseInt(process.env.PORT, 10), function(){
-  console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+  console.log('Listening on port ' + listener.address().port); //Listening on port 6000
 });
 
 // allow CORS
@@ -32,7 +32,7 @@ app.use(bodyParser.json()); // handle JSON request bodies
 app.use(bodyParser.urlencoded({ extended: true })); // handle x-www-form-urlencoded request bodies
 app.use(cookieParser());
 
-// app.use('/', apiRouter); // Any requests get passed to apiRouter
+app.use('/', apiRouter); // Any requests get passed to apiRouter
 
 app.use(logger('dev'));
 app.use(express.json());

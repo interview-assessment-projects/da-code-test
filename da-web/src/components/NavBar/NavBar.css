@@ -48,15 +48,4 @@
         display: inline-block;
         width: 33%;
     }
-
-    /* .NavBar::after {
-        content: '';
-        border-right: 2px solid #555;
-        position: absolute;
-        top: -5vh;
-        right: 0;
-        height: 150%;
-        border-bottom: 0;
-        width: auto;
-    } */
 }
