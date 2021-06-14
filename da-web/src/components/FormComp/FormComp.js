@@ -19,7 +19,6 @@ class Form extends Component {
   handleChange = (event) => {
     let nam = event.target.name;
     let val = event.target.value;
-    console.log(event);
     this.setState({ [nam]: val });
   };
 
@@ -28,6 +27,7 @@ class Form extends Component {
     alert("A message was submitted!");
     FormService.sendFrom(this.state.name, this.state.email, this.state.message);
     event.preventDefault();
+    event.target.reset();
   }
 
   render() {
