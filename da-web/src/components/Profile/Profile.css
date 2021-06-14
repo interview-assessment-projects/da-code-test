@@ -1,98 +1,98 @@
 .Profile {
-    position: relative;
-    margin-bottom: 10%;
+  position: relative;
+  margin-bottom: 10%;
 }
 
 .Profile::after {
-    content: '';
-    height: 0.5rem;
-    border-bottom: 2px solid #555;
-    position: absolute;
-    top: 105%;
-    left: -5vw;
-    width: 105vw;
+  content: "";
+  height: 0.5rem;
+  border-bottom: 2px solid #555;
+  position: absolute;
+  top: 105%;
+  left: -5vw;
+  width: 105vw;
 }
 
 .profile-img-cont {
-    width: 50%;
-    display: inline-block;
+  width: 50%;
+  display: inline-block;
 }
 
 .profile-img-cont img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .profile-icons {
-    width: 50%;
-    display: inline-block;
-    vertical-align:top
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .profile-icons ul {
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
 }
 
 .profile-icons li {
-    display: inline-block;
-    width: 40%;
-    margin: 5%;
+  display: inline-block;
+  width: 40%;
+  margin: 5%;
 }
 
 .profile-paragraph {
-    max-width: 100%;
-    display: block;
-    word-break: break-word;
+  max-width: 100%;
+  display: block;
+  word-break: break-word;
 }
 
 .profile-paragraph h1,
 .profile-paragraph p {
-    text-align: left;
+  text-align: left;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-    .profile-paragraph {
-        width: 70%;
-        margin: auto;
-    }
+  .profile-paragraph {
+    width: 70%;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .Profile {
-        display: flex;
-    }
+  .Profile {
+    display: flex;
+  }
 
-    .profile-img-cont {
-        flex: 1;
-    }
+  .profile-img-cont {
+    flex: 1;
+  }
 
-    .profile-icons,
-    .profile-paragraph {
-        flex: 2;
-    }
+  .profile-icons,
+  .profile-paragraph {
+    flex: 2;
+  }
 
-    .profile-icons li {
-        width: auto;
-    }
+  .profile-icons li {
+    width: auto;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
-    .Profile {
-        flex-direction: column;
-        align-items: center;
-        flex: 1;
-        margin-bottom: 0;
-    }
+  .Profile {
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 0;
+  }
 
-    .Profile::after {
-        content: '';
-        border-right: 2px solid #555;
-        position: absolute;
-        top: -5vh;
-        right: 0;
-        height: 150%;
-        border-bottom: 0;
-        width: auto;
-    }
+  .Profile::after {
+    content: "";
+    border-right: 2px solid #555;
+    position: absolute;
+    top: -5vh;
+    right: 0;
+    height: 150%;
+    border-bottom: 0;
+    width: auto;
+  }
 }

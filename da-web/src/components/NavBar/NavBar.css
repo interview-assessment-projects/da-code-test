@@ -1,51 +1,51 @@
 .NavBar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color:#fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 .NavBar::after {
-    content: '';
-    height: 0.5rem;
-    border-bottom: 2px solid #555;
-    position: absolute;
-    bottom: 100%;
-    left: -5vw;
-    width: 105vw;
+  content: "";
+  height: 0.5rem;
+  border-bottom: 2px solid #555;
+  position: absolute;
+  bottom: 100%;
+  left: -5vw;
+  width: 105vw;
 }
 
 .NavBar ul {
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
 }
 
 .NavBar li {
-    display: inline-block;
-    width: 33%;
+  display: inline-block;
+  width: 33%;
 }
 
 .NavBar a {
-    color: black;
+  color: black;
 }
 
 @media only screen and (min-width: 1280px) {
-    .NavBar {
-        position:initial;
-        width: auto;
-        height: 50vh;
-    }
+  .NavBar {
+    position: initial;
+    width: auto;
+    height: 50vh;
+  }
 
-    .NavBar ul {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: space-around;
-    }
+  .NavBar ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
 
-    .NavBar li {
-        display: inline-block;
-        width: 33%;
-    }
+  .NavBar li {
+    display: inline-block;
+    width: 33%;
+  }
 }

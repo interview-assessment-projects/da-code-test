@@ -1,7 +1,7 @@
-import Profile from './components/Profile/Profile';
-import FormComp from './components/FormComp/FormComp';
-import NavBar from './components/NavBar/NavBar';
-import './App.css';
+import Profile from "./components/Profile/Profile";
+import FormComp from "./components/FormComp/FormComp";
+import NavBar from "./components/NavBar/NavBar";
+import "./App.css";
 
 function App() {
   return (

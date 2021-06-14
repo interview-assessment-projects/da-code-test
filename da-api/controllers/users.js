@@ -16,7 +16,11 @@ const addUser = async (req, res) => {
           message: "User not added with name: " + req.body.sender,
         });
       }
-      emailGenerator.sendEmail(userMessageDetails.name, userMessageDetails.email, userMessageDetails.message);
+      emailGenerator.sendEmail(
+        userMessageDetails.name,
+        userMessageDetails.email,
+        userMessageDetails.message
+      );
       res.send(userMessageDetails);
     })
     .catch((err) => {
@@ -32,5 +36,5 @@ const addUser = async (req, res) => {
 };
 
 module.exports = {
-  addUser
+  addUser,
 };

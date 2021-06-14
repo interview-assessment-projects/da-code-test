@@ -7,8 +7,8 @@ const sendEmail = (name, emailAddr, message) => {
     service: "gmail",
     auth: {
       user: username,
-      pass: password
-    }
+      pass: password,
+    },
   });
 
   let mailOptions = {
