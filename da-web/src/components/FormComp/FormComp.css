@@ -33,39 +33,40 @@ input[type="textarea"]::-webkit-input-placeholder {
 
 input[type="submit"] {
   background-color: #fff;
-  padding: 10px 0;
+  padding: 10px;
+  border: 2px solid #555;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-    .Form {
-        width: 70%;
-        margin: auto;
-    }
+  .Form {
+    width: 70%;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .input-groups {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
+  .input-groups {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
-    .input-groups div {
-        flex: 1;
-    }
+  .input-groups div {
+    flex: 1;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
-    .Form {
-        flex: 1;
-        padding: 0 50px;
-    }
+  .Form {
+    flex: 1;
+    padding: 0 50px;
+  }
 
-    .input-groups {
-        flex-direction: column;
-    }
+  .input-groups {
+    flex-direction: column;
+  }
 
-    .input-groups {
-        align-items: normal;
-    }
+  .input-groups {
+    align-items: normal;
+  }
 }

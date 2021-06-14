@@ -1,13 +1,13 @@
+require('dotenv').config();
 var path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 var createError = require('http-errors');
 const cors = require('cors');
 var express = require('express');
 var logger = require('morgan');
 
-require('./models/db'); // application connects to db on startup
+require('./da-api/models/db'); // application connects to db on startup
 
-const apiRouter = require('./routes/index'); // get router index for api endpoints
+const apiRouter = require('./da-api/routes/index'); // get router index for api endpoints
 
 var app = express();
 
