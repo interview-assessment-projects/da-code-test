@@ -1,5 +1,5 @@
-const apiBaseUrl = 'http://localhost:8888'; // dev
-// const apiBaseUrl = "https://git.heroku.com/da-test-api.git"; // prod
+// const apiBaseUrl = 'http://localhost:8888'; // dev
+const apiBaseUrl = "https://da-test-api.herokuapp.com"; // prod
 
 const FormService = {
   sendFrom: async function (name, email, message) {

@@ -16,7 +16,9 @@ const sendEmail = (name, emailAddr, message) => {
     to: emailAddr,
     subject: `Message receipt for ${name}`,
     text: `We received your email containing the message:
+
             "${message}"
+
            We appreciate hearing from you!`,
   };
 

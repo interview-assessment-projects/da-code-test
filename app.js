@@ -25,6 +25,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/saveFormContent', apiRouter);
 
+// Tell Express to serve our React app
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function(request, response) {
+    response.sendFile(path.resolve(__dirname, '../react-app/build', 'index.html'));
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
