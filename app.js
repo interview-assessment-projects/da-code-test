@@ -22,10 +22,7 @@ app.use(function(req, res, next) {
   next();
 });
 // found the above code wasn't cutting it so I employed the following two lines
-app.use(cors({
-  origin: 'http://localhost:3000',
-  "Access-Control-Allow-Origin": '*'
-}));
+app.use(cors());
 app.options('*', cors());
 
 app.use(logger("dev"));
