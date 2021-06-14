@@ -24,6 +24,7 @@ class Form extends Component {
 
   // handle form submission
   handleSubmit(event) {
+    // replace alert with message component for success/failure messages
     alert("A message was submitted!");
     FormService.sendFrom(this.state.name, this.state.email, this.state.message);
     event.preventDefault();

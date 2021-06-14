@@ -1,5 +1,5 @@
-const apiBaseUrl = 'http://localhost:8888'; // dev
-// const apiBaseUrl = 'https://meme-server2.herokuapp.com/img'; // prod
+// const apiBaseUrl = 'http://localhost:8888'; // dev
+const apiBaseUrl = 'https://git.heroku.com/da-test-api.git'; // prod
 
 const FormService = {
 
