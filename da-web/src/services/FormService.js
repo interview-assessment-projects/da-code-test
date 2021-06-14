@@ -18,7 +18,6 @@ const FormService = {
       })
     };
     const response = await fetch(
-      {mode: "cors"},
       apiBaseUrl + "/saveFormContent",
       requestOptions
     );
