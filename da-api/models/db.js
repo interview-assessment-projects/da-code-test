@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 const readLine = require('readline');
 
-let dbURL;
-// dbURL = process.env.DB_HOST;
-dbURL = process.env.MONGODB_URI;
+let dbURL = process.env.MONGODB_URI;
 
 const connect = () => {
   setTimeout(() => mongoose.connect(dbURL, {
