@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
-const User = mongoose.model('users');
+const User = mongoose.model('user');
 
 // POST: /addUser - adds a new user to list
 const addUser = async (req, res) => {
-    const userMessageDetails = new Collection({
-        name: req.body.name,
-        email: req.body.email,
-        message: req.body.message
+    // return res.send('respond with a resource');
+    const userMessageDetails = new User({
+        name: req.body.sender,
+        email: req.body.address,
+        message: req.body.content
     })
     User
         .create(userMessageDetails)
@@ -15,7 +16,7 @@ const addUser = async (req, res) => {
                 return res
                     .status(404)
                     .send({
-                        message: "User not added with name: " + req.body.name
+                        message: "User not added with name: " + req.body.sender
                     });
             }
             res.send(userMessageDetails);
@@ -24,7 +25,7 @@ const addUser = async (req, res) => {
                 return res
                     .status(404)
                     .send({
-                        message: "User not added with name: " + req.body.name
+                        message: "User not added with name: " + req.body.sender
                     });
             }
             return res
